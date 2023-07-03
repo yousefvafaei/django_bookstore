@@ -4,8 +4,9 @@
 
 {% block content %}
     {% for book in books %}
-        <a href="{{ book.get_absolute_url}}">{{ book.title }}</a>
-        <p>{{ book.description }}</p>
+        <a href="{{ book.get_absolute_url}}"><h1>{{ book.title|capfirst }}</h1></a>
+        <p>{{ book.author|capfirst }}</p>
+        <p>{{ book.description|truncatewords:10 }}</p>
         <br>
     {% endfor %}
 {% endblock %}
