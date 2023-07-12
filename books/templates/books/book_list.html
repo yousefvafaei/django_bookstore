@@ -15,7 +15,8 @@
                         <div class="col-md-8 h-100">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="card-body">
-                                    <h3 class="card-title"><strong><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></strong></h3>
+                                    <h3 class="card-title"><strong>
+                                        <a class="text-decoration-none" href="{{ book.get_absolute_url }}">{{ book.title }}</a></strong></h3>
                                     <p class="card-text pt-3">{{ book.description|truncatewords:30 }}</p>
                                     <p class="text-muted">نویسنده: {{ book.author}}</p>
                                 </div>
